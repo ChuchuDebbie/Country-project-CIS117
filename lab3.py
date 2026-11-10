@@ -32,9 +32,10 @@ try:
                   
 except FileNotFoundError:
       print('country_full.csv not found')
-except IOError:
-      print('Input/output error')
 except PermissionError:
       print('Permission denied')
+except IOError:
+      print('Input/output error')
+
       
       
