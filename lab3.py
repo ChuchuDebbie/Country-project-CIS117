@@ -4,8 +4,6 @@
 #Collaboration: Chujun works on the reading and grouping parts and George works on the writing part. We discussed the logic and structure of the program together.
 
 
-
-
 import csv
 
 regions={} 
