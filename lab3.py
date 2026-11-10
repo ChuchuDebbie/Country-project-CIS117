@@ -36,6 +36,33 @@ except PermissionError:
       print('Permission denied')
 except IOError:
       print('Input/output error')
+      
+#part 2:  write one csv file per region
+
+def write_files(regions):
+    try:
+        for region in regions:
+            filename = region + ".csv"
+
+            with open(filename, mode = "w", newline = "") as file:
+                csv_writer = csv.writer(file)
+
+                csv_writer.writerow(["name", "region"])
+
+                for country in regions[region]:
+                    csv_writer.writerow(country)
+
+            print(filename, "created succesfully")
+
+    except PermissionError:
+        print("Error: Permission denied.")
+
+    except IOError:
+        print("Error: An Input/Output error occurred.")
+
+
+if regions:
+    write_files(regions)
 
       
       
